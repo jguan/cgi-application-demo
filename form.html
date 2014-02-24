@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Your favourite colour</title>
+</head>
+<body>
+<form action="webapp.pl" method="post">
+	<input type="hidden" name="rm" value="mode2" />      
+	<select name="colour" onchange='alert("Your selected "+this.value+" colour.")'>
+			<TMPL_LOOP NAME=COLOURS>
+			<option value="<TMPL_VAR NAME=COLOUR>"><TMPL_VAR NAME=COLOUR></option>
+			</TMPL_LOOP>
+	</select>
+ 	<input name="Submit" type="submit" value="Submit" />
+</form>
+</body>  
+</html>
